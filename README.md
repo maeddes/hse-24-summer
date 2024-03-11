@@ -21,6 +21,14 @@ cloud computing in own words and list examples for offerings, topologies and tec
 
 * What is Polyglot Software Development?
 * What did the role of containers change for polyglot software?
-* Security and Cloud
+* Security and Cloud - is it safe? :-)
 
 ![Polyglot Container](/pics/ContainerVsTraditional.png)
+
+### Outlook for Labs
+
+* Distributed app
+* Polyglot implementation
+* Containerisation
+* Kubernetes
+* DevOps/CICD/Observability (optional)
