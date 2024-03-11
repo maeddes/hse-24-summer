@@ -2,7 +2,7 @@
 
 ## Initial Brainstorming Session - Technologies and Motivators for Distributed Systems
 
-![Brainstorming](/pics/DistributedSystemsBrainstorm-2023-03-11.png)
+![Brainstorming](/pics/2024-03-11-DistributedSystemsBrainstorm.png)
 
 ### Content
 
@@ -23,7 +23,7 @@ cloud computing in own words and list examples for offerings, topologies and tec
 * What did the role of containers change for polyglot software?
 * Security and Cloud - is it safe? :-)
 
-![Polyglot Container](/pics/ContainerVsTraditional.png)
+![Polyglot Container](/pics/2024-03-11-ContainerVsTraditional.png)
 
 ### Outlook for Labs
 
@@ -32,3 +32,5 @@ cloud computing in own words and list examples for offerings, topologies and tec
 * Containerisation
 * Kubernetes
 * DevOps/CICD/Observability (optional)
+
+![Exercise Tech Stack](/pics/2024-03-11-Blackboard.jpg)
