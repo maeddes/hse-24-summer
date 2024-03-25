@@ -34,3 +34,12 @@ cloud computing in own words and list examples for offerings, topologies and tec
 * DevOps/CICD/Observability (optional)
 
 ![Exercise Tech Stack](/pics/2024-03-11-Blackboard.jpg)
+
+# 2023-March-18 Session canceled
+
+# 2023-March-25 Cloud-based IDEs Intro & Docker/Container
+
+### Homework
+
+* Get a public GitHub, GitLab or Bitbucket account
+* Play around with GitHub codespaces and/or Gitpod
