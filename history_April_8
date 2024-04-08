@@ -1,0 +1,44 @@
+    1  sdk
+    2  sdk upgrade java
+    3  java --version
+    4  cd spring-boot-rest
+    5  ls
+    6  curl https://start.spring.io
+    7  curl -G https://start.spring.io/starter.zip -d dependencies=web,actuator,devtools -d type=maven-project -d javaVersion=21 -o demo.zip
+    8  ls -ltr
+    9  unzip demo.zip
+   10  rm demo.zip 
+   11  mvn spring-boot:run
+   12  cd spring-sample
+   13  mvn spring-boot:run
+   14  mvn clean install
+   15  ls
+   16  ls target
+   17  java -jar target/demo-0.0.1-SNAPSHOT.jar 
+   18  export SERVER_PORT=8082
+   19  echo $SERVER_PORT 
+   20  java -jar target/demo-0.0.1-SNAPSHOT.jar 
+   21  mvn dependency:tree
+   22  mvn spring-boot:run
+   23  exit
+   24  sdk install java
+   25  mvn spring-boot:run
+   26  cd spring-boot-rest/
+   27  mvn spring-boot:run
+   28  curl
+   29  curl localhost:8080/strings/
+   30  curl -X POST localhost:8080/strings/neu
+   31  curl localhost:8080/strings/
+   32  curl -X POST localhost:8080/strings/neuer
+   33  curl localhost:8080/strings/
+   34  curl -X DELETE localhost:8080/strings/neuer
+   35  curl localhost:8080/strings/
+   36  curl -X POST localhost:8080/strings/neuer
+   37  curl -X POST localhost:8080/strings/neuerer
+   38  curl -X POST localhost:8080/strings/neu
+   39  curl -X POST localhost:8080/strings/neuerer
+   40  curl localhost:8080/strings/
+   41  curl -X PUT localhost:8080/strings/neuerer
+   42  curl localhost:8080/strings/
+   43  history 
+   44  history > history_April_8
