@@ -1,4 +1,4 @@
-# 2023-March-11 Cloud and Semester Introduction
+# 2024-March-11 Cloud and Semester Introduction
 
 ## Initial Brainstorming Session - Technologies and Motivators for Distributed Systems
 
@@ -40,9 +40,9 @@ cloud computing in own words and list examples for offerings, topologies and tec
 * Get a public GitHub, GitLab or Bitbucket account
 * Play around with GitHub codespaces and/or Gitpod
   
-# 2023-March-18 Session canceled
+# 2024-March-18 Session canceled
 
-# 2023-March-25 Cloud-based IDEs Intro & Docker/Container
+# 2024-March-25 Cloud-based IDEs Intro & Docker/Container
 
 ### Content 
 * Why do we need Containers?
