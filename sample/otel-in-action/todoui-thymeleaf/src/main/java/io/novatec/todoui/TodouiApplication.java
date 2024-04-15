@@ -38,54 +38,6 @@ public class TodouiApplication {
 		logger.info(" UI initialized for backend at "+endpoint);
 	}
 
-	@GetMapping("/stress")
-	public String stress(){
-
-		logger.info(java.time.LocalDateTime.now() + " : Starting stress");
-		double result = 0;
-		for (int i = 0; i < 100000000; i++) {
-			result += System.currentTimeMillis();
-		}
-		logger.info(java.time.LocalDateTime.now() + " : Ending stress, result: " + result);
-		return "redirect:/";
-
-	}
-
-	public static List<Double> list = new ArrayList<>(); // can never be GC'ed
-	@GetMapping("/leak")
-	public String leak(){
-
-		logger.info(java.time.LocalDateTime.now() + " : Start leaking");
-		for (int i = 0; i < 10000000; i++) {
-			list.add(Math.random());
-		}
-		logger.info(java.time.LocalDateTime.now() + " : End leaking");
-		return "redirect:/";
-
-	}
-
-	@GetMapping("/createcookie")
-	public String createCookie(HttpServletResponse response) {
-
-		Cookie cookie = new Cookie("featureflag", "on");
-		cookie.setPath("/");
-		response.addCookie(cookie);
-		return "redirect:/";
-
-	}
-
-	@GetMapping("/deletecookie")
-	public String deleteCookie(HttpServletResponse response) {
-
-		Cookie cookie = new Cookie("featureflag", null);
-		cookie.setMaxAge(0);
-		cookie.setPath("/");
-		response.addCookie(cookie);
-		return "redirect:/";
-
-	}
-
-
 	@GetMapping
 	public String getItems(Model model){
 
