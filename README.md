@@ -74,3 +74,8 @@ cloud computing in own words and list examples for offerings, topologies and tec
 
 ### Labs
 Exercises can be found [here](https://lecture.new.trainings.nvtc.io/basics/container/)
+
+
+# 2024-April-8th Spring Boot Intro & HTTP/REST - TODO!
+
+# 2024-April-15th Distributed Application Sample / Outlook Lab / Docker Advanced topics - TODO :-)
