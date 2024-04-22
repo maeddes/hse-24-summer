@@ -76,7 +76,7 @@ cloud computing in own words and list examples for offerings, topologies and tec
 Exercises can be found [here](https://lecture.new.trainings.nvtc.io/basics/container/)
 
 
-# 2024-April-8th Spring Boot Intro & HTTP/REST - TODO!
+# 2024-April-8th Spring Boot Intro & HTTP/REST 
 
 ## Spring Boot
 
