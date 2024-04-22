@@ -78,4 +78,94 @@ Exercises can be found [here](https://lecture.new.trainings.nvtc.io/basics/conta
 
 # 2024-April-8th Spring Boot Intro & HTTP/REST - TODO!
 
+## Spring Boot
+
+![Spring Boot typical flow](https://raw.githubusercontent.com/maeddes/hft-2022-winter/main/pics/spring_boot_initializr_flow_2022_10_17.png)
+
+* Background: Spring Framework - History & components
+* Spring ← → Spring Boot
+* Spring Initializr (start.spring.io) & starter dependencies
+* Basic project structure (folders, configuration ..)
+* "Hello, World!" example explained
+* Using Actuator
+
+### Objectives
+
+The student is able to build and configure an own Spring Boot application from scratch with the IDE of choice. The exercise is to build an own "Hello, World!" application that exposes various - endpoints and is able to execute CRUD operations on the state of the application. Optional: Add logging and testing, configure Actuator.
+
+### Review questions
+
+* "WHY Spring Boot?" Provide 3 advantages of this framework
+* Describe Spring Boot to somebody not familiar with it in own words ()
+* How do you start building a Spring Boot app? Initializr & Dependencies
+* List 4 different starter dependencies and explain briefly what they do (old question) (4P)
+"I did not do my lab task with Spring Boot. I implemented using Python and I can tell you how it works there ..."
+
+### Helpful Links:
+
+- https://start.spring.io
+- https://www.baeldung.com/spring-requestmapping
+- https://www.baeldung.com/spring-boot-actuator-enable-endpoints
+
+## REST
+
+![REST, Controllers, Representations](https://github.com/maeddes/hft-23-winter/blob/main/pics/REST_stuff.png)
+
+* Synchronous communication
+* HTTP and REST
+* Verbs, Resources, Nouns
+* Evolution, Richardson Maturity Model
+* CRUD Operations
+* Building a REST API with Spring (Boot)
+* Building a data model with REST
+
+### Links:
+
+* https://restfulapi.net/idempotent-rest-apis/
+* https://restfulapi.net/richardson-maturity-model/
+* https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+* https://www.baeldung.com/spring-requestmapping
+* https://www.baeldung.com/spring-request-response-body
+* https://www.baeldung.com/spring-rest-openapi-documentation
+* https://www.baeldung.com/spring-cors
+
+### Review questions
+
+* Identify good and bad API examples and explain why
+* Describe the concepts of Verbs and Nouns
+* When is an invocation idempotent and safe? What does it mean? Provide examples
+* Describe in your own words the mapping of REST calls to database (SQL) and CRUD calls
+
+### Objectives and exercises
+_The student understands the concepts of an API and synchronous communication in distributed systems and can explain it in own words._
+
 # 2024-April-15th Distributed Application Sample / Outlook Lab / Docker Advanced topics - TODO :-)
+
+# 2024-April-22nd Cloud-native Software development - Theory part
+
+Cloud-native Software development - Theory part
+
+Theory lecture - Cloud-Native Software 
+
+* CAP Theorem
+* Conway's Law
+* Fallacies of distributed computing
+* Domain-Driven Design basics (not relevant for exam)
+* 12-factor application
+* Evolution of applications and deployments: Monolithic -> Service-Oriented Architecture -> Microservices
+* Introduction to serverless and FaaS terminology
+
+### Objectives and exercises
+_The student knows about the evolution of distributed systems (and middleware) and the drivers towards state-of-the-art implementation and deployment. She/he can explain the underlying concepts and theories and put it into practical context. No dedicated exercises for this module. Recap of basics: Spring Boot, Docker, configuration._
+
+### Review questions
+
+* "WHY" Cloud-Native Software? What IS Cloud-Native Software?
+* Why "evolution" from a monolithic approach to a distributed approach?
+* How does the CAP Theorem/Conway's Law relate to this?
+* (NO Domain-Driven Design questions)
+* How do the 12-factor application "methodology" relate to the technologies that we covered in this semester? (important)
+* "WHY" is external configuration important in cloud-native software?
+* Where did you see aspects of external configuration in the technologies we used? Provide examples
+* What is the advantage of polyglot applications? Why in particular for cloud-native software? What kind of disadvantages do you see?
