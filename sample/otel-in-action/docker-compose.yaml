@@ -6,7 +6,7 @@ services:
 ### APPLICATION PART
 
   postgresdb:
-    image: ${POSTGRES_IMAGE}
+    image: postgres
     networks:
       - todonet
     ports:
@@ -17,7 +17,7 @@ services:
       - POSTGRES_DB=mydb
 
   todobackend-springboot:
-    image: todobackend:v2402
+    image: maeddes/todobackend-springboot:v2402
     networks:
       - todonet
     build:
@@ -29,8 +29,8 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prod
 #      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4318 # http endpoint
-      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
-      - OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=otelcol:4317
+      - OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=otelcol:4317
       - OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=grpc
       - OTEL_EXPORTER_OTLP_METRICS_PROTOCOL=grpc
       - OTEL_RESOURCE_ATTRIBUTES=service.name=todobackend-springboot
@@ -40,7 +40,7 @@ services:
       - postgresdb
 
   todoui-thymeleaf:
-    image: todoui:otel
+    image: maeddes/todoui-thymeleaf:v2404
     build:
       context: ./todoui-thymeleaf
       dockerfile: Dockerfile #-multistage
@@ -50,8 +50,8 @@ services:
       - "8090:8090"
     environment:
       - BACKEND_URL=http://todobackend-springboot:8080/
-      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
-      - OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=otelcol:4317
+      - OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=otelcol:4317
       - OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=grpc
       - OTEL_EXPORTER_OTLP_METRICS_PROTOCOL=grpc
       - OTEL_RESOURCE_ATTRIBUTES=service.name=todoui-thymeleaf
@@ -59,7 +59,7 @@ services:
       - OTEL_LOGS_EXPORTER=none
 
   todoui-flask:
-    image: todoui-flask:v0.1
+    image: maeddes/todoui-flask:v2404
     build:
       context: ./todoui-flask
     networks:
@@ -68,7 +68,7 @@ services:
       - "5001:5000"
     environment:
       - BACKEND_URL=http://todobackend-springboot:8080/todos/
-      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=otelcol:4317
       - OTEL_RESOURCE_ATTRIBUTES=service.name=todoui-flask
       - OTEL_METRICS_EXPORTER=otlp
 
