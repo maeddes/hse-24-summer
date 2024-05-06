@@ -169,3 +169,7 @@ _The student knows about the evolution of distributed systems (and middleware) a
 * "WHY" is external configuration important in cloud-native software?
 * Where did you see aspects of external configuration in the technologies we used? Provide examples
 * What is the advantage of polyglot applications? Why in particular for cloud-native software? What kind of disadvantages do you see?
+
+# 2024-April-29th On-Site Lab Session - No documentation here
+
+# 2024-May-6th Review Labs - Peristence / Spring Data - CAP Theorem
