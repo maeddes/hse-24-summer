@@ -140,7 +140,26 @@ The student is able to build and configure an own Spring Boot application from s
 ### Objectives and exercises
 _The student understands the concepts of an API and synchronous communication in distributed systems and can explain it in own words._
 
-# 2024-April-15th Distributed Application Sample / Outlook Lab / Docker Advanced topics - TODO :-)
+# 2024-April-15th Distributed Application Sample / Outlook Lab / Docker Advanced topics 
+
+Docker Advanced Topics:
+* Storage through Docker Volumes
+* Connectivity through Docker Networks
+* Multi Container Setup through Docker Compose
+
+![image](https://github.com/maeddes/hse-24-summer/assets/22505258/f1936aff-33a3-44e2-9278-f6bee801cda3)
+
+### Objectives and exercises
+_The student understands how storage and connectivity are handled per default in containers and knows the purpose and implementation of volumes, networks, and docker-compose files.
+Exercises can be found in the later chapters of the docker exercise website._
+
+### Review questions
+* How does data persistence behave by default in containers for files newly created in a running container?
+* What is the difference between Bind Mounts and Volumes?
+* When to use volumes for my containers?
+* How to share a file or directory with multiple containers?
+* Why do i need a network for containers? When do i not need it?
+* The results created by a docker-compose file could also be created manually: entering necessary cli commands one after another. What commands would be used?
 
 # 2024-April-22nd Cloud-native Software development - Theory part
 
