@@ -200,17 +200,24 @@ _The student knows about the evolution of distributed systems (and middleware) a
 # 2024-May-27th - Kubernetes
 
 Kubernetes Topics:
-- The Kubernetes Cluster
-- The Contol Plane
-- Worker Nodes
-- Pods
-- Deployments
-- Services
-- Desired State Management
+* The Kubernetes Cluster
+* The Contol Plane
+* Worker Nodes
+* Pods
+* Deployments
+* Services
+* Desired State Management
 
 ![image](https://github.com/maeddes/hse-24-summer/assets/22505258/f2a22f5a-f66d-4d57-8506-d9ff8595e662)
 
 ### Objectives and Exercises
-_The Student understands the core principle of Kubernets, the key characteristics and the basic API objects to interact with k8s. The Student can explain the differences between these objects and their purpose. As exercises we have added a chapter to the ![lecture exercises website](https://lecture.new.trainings.nvtc.io/k8s_basics/)._
+_The Student understands the core principle of Kubernets, the key characteristics and the basic API objects to interact with k8s. The Student can explain the differences between these objects and their purpose. As exercises we have added a chapter to the [lecture exercises website](https://lecture.new.trainings.nvtc.io/k8s_basics/)._
 
+### Review Questions
 
+* What are the core ideas/principles of kubernetes?
+* What could be a valid scenario for a multi cluster setup?
+* How does Kubernets achieve and maintain the desired state?
+* Why do we use pods instead of using containers directly?
+* Why do we (preferably) use deployments instead of just pods?
+* What exactly happens when a node fails and how does the recovery procedure look like?
