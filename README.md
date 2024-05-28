@@ -192,3 +192,25 @@ _The student knows about the evolution of distributed systems (and middleware) a
 # 2024-April-29th On-Site Lab Session - No documentation here
 
 # 2024-May-6th Review Labs - Peristence / Spring Data - CAP Theorem
+
+# 2024-May-13th Resilience
+
+# 2024-May-20th No Lecture
+
+# 2024-May-27th - Kubernetes
+
+Kubernetes Topics:
+- The Kubernetes Cluster
+- The Contol Plane
+- Worker Nodes
+- Pods
+- Deployments
+- Services
+- Desired State Management
+
+![image](https://github.com/maeddes/hse-24-summer/assets/22505258/f2a22f5a-f66d-4d57-8506-d9ff8595e662)
+
+### Objectives and Exercises
+_The Student understands the core principle of Kubernets, the key characteristics and the basic API objects to interact with k8s. The Student can explain the differences between these objects and their purpose. As exercises we have added a chapter to the ![lecture exercises website](https://lecture.new.trainings.nvtc.io/k8s_basics/)._
+
+
