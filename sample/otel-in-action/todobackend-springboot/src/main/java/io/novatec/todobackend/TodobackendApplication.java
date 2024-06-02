@@ -71,6 +71,7 @@ public class TodobackendApplication {
 
 		//for(Todo todo : todoRepository.findAll()) todos.add(todo.getTodo());
 		todoRepository.findAll().forEach(todo -> todos.add(todo.getTodo()));
+
 		logger.info("GET /todos/ "+todos.toString());
 
 
