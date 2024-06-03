@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: todobackend
+  name: todobackend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todobackend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: todobackend
+    spec:
+      containers:
+      - image: maeddes/todobackend:hse24patched
+        name: todobackend
+        resources: {}
+status: {}
