@@ -221,3 +221,7 @@ _The Student understands the core principle of Kubernets, the key characteristic
 * Why do we use pods instead of using containers directly?
 * Why do we (preferably) use deployments instead of just pods?
 * What exactly happens when a node fails and how does the recovery procedure look like?
+
+# 2024-June-3rd - Docker-Compose vs Kubernetes
+
+![Comparison](/pics/2024-06-03-compose-VS-k8s.png)
