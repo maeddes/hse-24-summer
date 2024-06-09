@@ -1,0 +1,68 @@
+info:
+  contact: {}
+paths:
+  /todos/:
+    get:
+      description: GET method for all tasks
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              type: string
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: GET method for all tasks
+      tags:
+      - todos
+  /todos/{task}:
+    delete:
+      description: DELETE method for one task, fetched by title
+      parameters:
+      - description: task title
+        in: path
+        name: task
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: GDELETE method for one task
+      tags:
+      - todos
+    get:
+      description: GET method for one task, fetched by title
+      parameters:
+      - description: task title
+        in: path
+        name: task
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: GET method for one task
+      tags:
+      - todos
+swagger: "2.0"
