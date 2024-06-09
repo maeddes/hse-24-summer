@@ -24,38 +24,38 @@ var client *mongo.Client
 //-----GET method for all todos-----//
 func get_todo_all(response http.ResponseWriter, request *http.Request) {
     response.Header().Set("content-type", "application/json")
-	//'slice' -> basically an array
-    var todos []Todo
-	//get table
+    //'slice' -> basically an array
+    var tasks []string
+    //get table
     collection := client.Database("todo_db").Collection("todos")
-	//context -> will cancel db query after 10s if no response
+    //context -> will cancel db query after 10s if no response
     ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
-	//grab all entries, this returns cursor with all todos
+    //grab all entries, this returns cursor with all todos
     cursor, err := collection.Find(ctx, bson.M{})
     if err != nil {
-		//return err500 if query fails
+        //return err500 if query fails
         response.WriteHeader(http.StatusInternalServerError)
         response.Write([]byte(`{ "error1": "` + err.Error() + `" }`))
         return
     }
-	//keyword defer -> called when function returns, even if errors occur
+    //keyword defer -> called when function returns, even if errors occur
     defer cursor.Close(ctx)
-	//iterate through cursor, append entries to todo-slice
+    //iterate through cursor, append entries to todo-slice
     for cursor.Next(ctx) {
         var todo Todo
         cursor.Decode(&todo)
-        todos = append(todos, todo)
+        tasks = append(tasks, todo.Task)
     }
     if err := cursor.Err(); err != nil {
-		//return err500 if fetching fails
+        //return err500 if fetching fails
         response.WriteHeader(http.StatusInternalServerError)
         response.Write([]byte(`{ "error2": "` + err.Error() + `" }`))
         return
     }
-	//response 200 OK
-	response.WriteHeader(http.StatusOK)
-	//return list of todos in json format
-    json.NewEncoder(response).Encode(todos)
+    //response 200 OK
+    response.WriteHeader(http.StatusOK)
+    //return array of strings containing all tasks
+    json.NewEncoder(response).Encode(tasks)
 }
 
 //-----GET method for single task, by title-----//
