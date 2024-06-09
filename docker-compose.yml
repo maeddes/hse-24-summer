@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo_db
+    environment:
+      - MONGO_URI=mongodb://superuser:superuser@mongo_db:27017/todo_db?authSource=admin
+
+  mongo_db:
+    image: mongo:latest
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=superuser
+      - MONGO_INITDB_ROOT_PASSWORD=superuser
+      - MONGO_INITDB_DATABASE=todo_db
+    volumes:
+      - mongo_data:/data/db
+      - ./mongo_db_init.sh:/docker-entrypoint-initdb.d/mongo_db_init.sh
+
+volumes:
+  mongo_data:
