@@ -12,6 +12,8 @@ import (
     "go.mongodb.org/mongo-driver/bson"
     "go.mongodb.org/mongo-driver/mongo"
     "go.mongodb.org/mongo-driver/mongo/options"
+    "github.com/swaggo/http-swagger"
+    _ "Distributed-Systems-24-summer/docs"
 )
 
 //todo struct to hold tasks
@@ -21,7 +23,14 @@ type Todo struct {
 
 var client *mongo.Client
 
-//-----GET method for all todos-----//
+/*-----GET method for all todos-----*/
+// @Summary GET method for all tasks
+// @Description GET method for all tasks
+// @Tags todos
+// @Produce json
+// @Success 200 {array} string
+// @Failure 500 {string} string "Internal Server Error"
+// @Router /todos/ [get]
 func get_todo_all(response http.ResponseWriter, request *http.Request) {
     response.Header().Set("content-type", "application/json")
     //'slice' -> basically an array
@@ -58,7 +67,15 @@ func get_todo_all(response http.ResponseWriter, request *http.Request) {
     json.NewEncoder(response).Encode(tasks)
 }
 
-//-----GET method for single task, by title-----//
+/*-----GET method for single task, by title-----*/
+// @Summary GET method for one task
+// @Description GET method for one task, fetched by title
+// @Tags todos
+// @Produce json
+// @Param task path string true "task title"
+// @Success 200 {string} string
+// @Failure 500 {string} string "Internal Server Error"
+// @Router /todos/{task} [get]
 func get_todo_single(response http.ResponseWriter, request *http.Request) {
     response.Header().Set("content-type", "application/json")
 	//get url parameters (url /x/y/z -> [x,y,z])
@@ -86,7 +103,15 @@ func get_todo_single(response http.ResponseWriter, request *http.Request) {
     json.NewEncoder(response).Encode(todo)
 }
 
-//-----DELETE method for single task, by title-----//
+/*-----DELETE method for single task, by title-----*/
+// @Summary GDELETE method for one task
+// @Description DELETE method for one task, fetched by title
+// @Tags todos
+// @Produce json
+// @Param task path string true "task title"
+// @Success 200 {string} string
+// @Failure 500 {string} string "Internal Server Error"
+// @Router /todos/{task} [delete]
 func delete_todo_single(response http.ResponseWriter, request *http.Request) {
     response.Header().Set("content-type", "application/json")
 	//get url parameters
@@ -130,8 +155,8 @@ func main() {
     router := mux.NewRouter()
 	//register endpoints
     router.HandleFunc("/todos/", get_todo_all).Methods("GET")
-    router.HandleFunc("/todo/{task}", get_todo_single).Methods("GET")
-    router.HandleFunc("/todo/{task}", delete_todo_single).Methods("DELETE")
+    router.HandleFunc("/todos/{task}", get_todo_single).Methods("GET")
+    router.HandleFunc("/todos/{task}", delete_todo_single).Methods("DELETE")
 	//default handler for incoming requests
     http.Handle("/", router)
     
