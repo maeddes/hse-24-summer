@@ -97,8 +97,8 @@ func get_todo_single(response http.ResponseWriter, request *http.Request) {
     }
 	//response 200 OK
 	response.WriteHeader(http.StatusOK)
-	//return single todo in json format
-    json.NewEncoder(response).Encode(todo)
+	//return single todo string
+    json.NewEncoder(response).Encode(todo.Task)
 }
 
 /*-----DELETE method for single task, by title-----*/
@@ -116,13 +116,14 @@ func delete_todo_single(response http.ResponseWriter, request *http.Request) {
     params := mux.Vars(request)
 	//grab task from parameter list
     task := params["task"]
+    var todo Todo
 	//get table
     collection := client.Database("todo_db").Collection("todos")
 	//context -> will cancel query after 10s if no response
     ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
 	//delete task specified in url
-	//err stays nil unless DeleteOne cant find specified task
-    _, err := collection.DeleteOne(ctx, bson.M{"task": task})
+	//err stays nil unless FindOneAndDelete cant find specified task
+    err := collection.FindOneAndDelete(ctx, bson.M{"task": task}).Decode(&todo)
     if err != nil {
 		//return err500 if query fails
         response.WriteHeader(http.StatusInternalServerError)
@@ -131,6 +132,8 @@ func delete_todo_single(response http.ResponseWriter, request *http.Request) {
     }
 	//response 200 OK
 	response.WriteHeader(http.StatusOK)
+    //return deleted task string
+    json.NewEncoder(response).Encode(todo.Task)
 }
 
 func main() {
