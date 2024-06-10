@@ -195,6 +195,11 @@ _The student knows about the evolution of distributed systems (and middleware) a
 
 # 2024-May-13th Resilience
 
+### Review questions
+
+* List 3 resilience patterns of your choice, describe briefly how they work and provide a real-world example
+(e.g. automatic restarts, the process of an app is observed and the app is restarted in case of downtime, e.g. docker-compose, Kubernetes)
+
 # 2024-May-20th No Lecture
 
 # 2024-May-27th - Kubernetes
