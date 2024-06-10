@@ -19,6 +19,22 @@ spec:
     spec:
       containers:
       - image: maeddes/todobackend:hse24patched
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1G
         name: todobackend
-        resources: {}
+        readinessProbe:
+          httpGet:
+            path: /hello
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 1
+        livenessProbe:
+          httpGet:
+            path: /todos/
+            port: 8080
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          failureThreshold: 2
 status: {}
