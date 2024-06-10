@@ -19,10 +19,10 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: disgame/lab:todoui
+      - image: maeddes/todoui-thymeleaf:hse24patched
         env:
         - name: BACKEND_URL
-          value: "http://todo-api:8000"
+          value: "http://todobackend:8080"
         name: lab
         resources: {}
 status: {}
