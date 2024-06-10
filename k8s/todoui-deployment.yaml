@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: todoui
+  name: todoui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todoui
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: todoui
+        tier: frontend
+    spec:
+      containers:
+      - image: disgame/lab:todoui
+        env:
+        - name: BACKEND_URL
+          value: "http://todo-api:8000"
+        name: lab
+        resources: {}
+status: {}
