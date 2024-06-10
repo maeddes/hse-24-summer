@@ -216,7 +216,7 @@ Kubernetes Topics:
 ![image](https://github.com/maeddes/hse-24-summer/assets/22505258/f2a22f5a-f66d-4d57-8506-d9ff8595e662)
 
 ### Objectives and Exercises
-_The Student understands the core principle of Kubernets, the key characteristics and the basic API objects to interact with k8s. The Student can explain the differences between these objects and their purpose. As exercises we have added a chapter to the [lecture exercises website](https://lecture.new.trainings.nvtc.io/k8s_basics/)._
+_The Student understands the core principle of Kubernetes, the key characteristics and the basic API objects to interact with k8s. The Student can explain the differences between these objects and their purpose. As exercises we have added a chapter to the [lecture exercises website](https://lecture.new.trainings.nvtc.io/k8s_basics/)._
 
 ### Review Questions
 
@@ -228,5 +228,9 @@ _The Student understands the core principle of Kubernets, the key characteristic
 * What exactly happens when a node fails and how does the recovery procedure look like?
 
 # 2024-June-3rd - Docker-Compose vs Kubernetes
+
+### Review questions
+
+* Explain the limitations of Docker as opposed to Kubernetes on the aspect of scaling? How can it be achieved in both technologies?
 
 ![Comparison](/pics/2024-06-03-compose-VS-k8s.png)
