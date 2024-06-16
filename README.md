@@ -193,10 +193,48 @@ _The student knows about the evolution of distributed systems (and middleware) a
 
 # 2024-May-6th Review Labs - Peristence / Spring Data - CAP Theorem
 
+![Recap 12-factor](https://github.com/maeddes/hft-23-winter/raw/main/pics/12_factor_DB.png)
+
+* Spring Data
+* Concept of entities and repositories
+* JPA and JDBC basics
+* H2, PostgeSQL, MySQL - configuration via Spring Boot profiles
+* Running databases as Docker images
+
+![Spring Data](https://github.com/maeddes/hft-2022-winter/raw/main/pics/spring_data_overview.png)
+
+### Objectives and exercises
+_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
+
+### Review Questions
+
+* "WHY" persistence? "WHY" persistence frameworks like JPA?
+* Describe the necessary components to build an application with Spring Data? Potentially sketch
+* What does the annotation @Entity do? 
+* How could docker compose help if you have a persistence-based application?
+
 # 2024-May-13th Resilience
 
-### Review questions
+* What is Resilience
+* Resilience in Distributed Systems
+* Typical Problems in distributed Systems
+* Patterns towards Resilience
+    * Retry
+    * Fallback
+    * Timeout
+    * Loadbalancer
+    * Circuit Breaker
+    * Monitoring
 
+### Objectives
+
+_The student understands what errors distributed systems typically face and how to design a more resilient systems through various design patterns.
+No exercise for this module.
+
+### Review questions
+* Explain Resilience in distributed systems
+* How to classify the error types a service might be facing
+* Outline the concept of different resilience patterns
 * List 3 resilience patterns of your choice, describe briefly how they work and provide a real-world example
 (e.g. automatic restarts, the process of an app is observed and the app is restarted in case of downtime, e.g. docker-compose, Kubernetes)
 
@@ -234,3 +272,8 @@ _The Student understands the core principle of Kubernetes, the key characteristi
 * Explain the limitations of Docker as opposed to Kubernetes on the aspect of scaling? How can it be achieved in both technologies?
 
 ![Comparison](/pics/2024-06-03-compose-VS-k8s.png)
+
+# 2024-June-10th - Kubernetes - Readiness and Liveness Probes
+
+Link:
+* https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
