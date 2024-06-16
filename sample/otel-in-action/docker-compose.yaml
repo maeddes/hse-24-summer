@@ -17,7 +17,7 @@ services:
       - POSTGRES_DB=mydb
 
   todobackend-springboot:
-    #image: maeddes/todobackend-springboot:v2402
+    image: maeddes/todobackend-springboot:hse24
     networks:
       - todonet
     build:
@@ -32,7 +32,7 @@ services:
       - postgresdb
 
   todoui-thymeleaf:
-    #image: maeddes/todoui-thymeleaf:v2404
+    image: maeddes/todoui-thymeleaf:hse24
     build:
       context: ./todoui-thymeleaf
       dockerfile: Dockerfile #-multistage
