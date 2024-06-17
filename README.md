@@ -199,21 +199,18 @@ _The student knows about the evolution of distributed systems (and middleware) a
 
 * Spring Data
 * Concept of entities and repositories
-* JPA and JDBC basics
-* H2, PostgeSQL, MySQL - configuration via Spring Boot profiles
-* Running databases as Docker images
+* Running databases based on Docker images as containers
 
 ![Spring Data](https://github.com/maeddes/hft-2022-winter/raw/main/pics/spring_data_overview.png)
 
 ### Objectives and exercises
-_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. The database can either be in-memory (H2) or a (containerized) PostgreSQL. Optional: Provide a docker-compose file to stand up a multi-container environment with application and database._
+_The student is able to build a Spring Boot application (or extend an existing one) with Spring Data configuration. The exercise is to create an application, which performs CRUD operations on a database backend. Other technologies than Spring Boot ar just as good. Provide a docker-compose file to stand up a multi-container environment with application and database._
 
 ### Review Questions
 
 * "WHY" persistence? "WHY" persistence frameworks like JPA?
-* Describe the necessary components to build an application with Spring Data? Potentially sketch
-* What does the annotation @Entity do? 
-* How could docker compose help if you have a persistence-based application?
+* Describe the necessary components to build an application with Spring Data or your technology of choice? Potentially sketch
+* How can docker compose help if you have a persistence-based application?
 
 # 2024-May-13th Resilience
 
