@@ -274,5 +274,9 @@ _The Student understands the core principle of Kubernetes, the key characteristi
 
 # 2024-June-10th - Kubernetes - Readiness and Liveness Probes
 
+* Concept of probes and health checks in Kubernetes
+* "WHY?" - Necessity of these checks. Especially in the context of container based applications
+* See documenation and comments in code
+
 Link:
 * https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/

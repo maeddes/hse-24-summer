@@ -24,12 +24,16 @@ spec:
             cpu: "1"
             memory: 1G
         name: todobackend
+        # Readiness Probe will check if the application is able to receive requests
+        # Kubernetes does not know about the details of an application in a container, someone needs to define when an application is ready
         readinessProbe:
           httpGet:
             path: /hello
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 1
+        # Liveness Probe will check if the application is still alive or should be restarted
+        # Kubernetes does not know about the details of an application in a container, someone needs to define when an application is dead
         livenessProbe:
           httpGet:
             path: /todos/
