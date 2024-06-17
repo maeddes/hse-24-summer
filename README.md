@@ -193,6 +193,8 @@ _The student knows about the evolution of distributed systems (and middleware) a
 
 # 2024-May-6th Review Labs - Peristence / Spring Data - CAP Theorem
 
+![CAP Theorem Recap](https://github.com/maeddes/hft-23-winter/blob/main/pics/CAP_Theorem_State.png)
+
 ![Recap 12-factor](https://github.com/maeddes/hft-23-winter/raw/main/pics/12_factor_DB.png)
 
 * Spring Data
