@@ -231,7 +231,7 @@ _The student is able to build a Spring Boot application (or extend an existing o
 ### Objectives
 
 _The student understands what errors distributed systems typically face and how to design a more resilient systems through various design patterns.
-No exercise for this module.
+No exercise for this module._
 
 ### Review questions
 * Explain Resilience in distributed systems
