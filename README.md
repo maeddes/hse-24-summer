@@ -280,3 +280,17 @@ _The Student understands the core principle of Kubernetes, the key characteristi
 
 Link:
 * https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+
+# 2ß24-June-17th - Helm
+
+* Motivation: drawbacks of k8s workflow
+* helm templating
+* helm charts
+* helm dependencies
+  
+![image](https://github.com/maeddes/hse-24-summer/assets/22505258/cd8b7a1c-e1f1-479e-a5b8-58579e608468)
+
+### Review Questions
+* What is the core principal of helm and what can it be compared to?
+* How does it simplify the kubernetes workflow
+* What is a possible scenario where helm can be utilized?
