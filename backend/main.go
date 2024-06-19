@@ -150,7 +150,7 @@ func add_todo_single(response http.ResponseWriter, request *http.Request) {
 	//get url parameters
 	params := mux.Vars(request)
 	//grab task from parameter list
-	task := params["todo"]
+	task := params["task"]
 	todo := Todo{Task: task}
 	//get table
 	collection := client.Database("todo_db").Collection("todos")

@@ -26,5 +26,15 @@ services:
       - mongo_data:/data/db
       - ./mongo_db_init.sh:/docker-entrypoint-initdb.d/mongo_db_init.sh
 
+  todoui-thymeleaf:
+    image: maeddes/todoui-thymeleaf:hse24
+    build:
+      context: ./todoui-thymeleaf
+      dockerfile: Dockerfile #-multistage
+    ports:
+      - "8090:8090"
+    environment:
+      - BACKEND_URL=http://backend:8080/
+
 volumes:
   mongo_data:
