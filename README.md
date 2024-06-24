@@ -281,7 +281,7 @@ _The Student understands the core principle of Kubernetes, the key characteristi
 Link:
 * https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 
-# 2ß24-June-17th - Helm
+# 2024-June-17th - Helm
 
 * Motivation: drawbacks of k8s workflow
 * helm templating
