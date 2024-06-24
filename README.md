@@ -230,6 +230,8 @@ _The student is able to build a Spring Boot application (or extend an existing o
 
 # 2024-May-13th Resilience
 
+![Fallacies by Denise Yu](https://miro.medium.com/v2/resize:fit:797/0*4u89K8_yoVlwar4o.png)
+
 * What is Resilience
 * Resilience in Distributed Systems
 * Typical Problems in distributed Systems
@@ -249,6 +251,7 @@ No exercise for this module._
 ### Review questions
 * Explain Resilience in distributed systems
 * How to classify the error types a service might be facing
+* Which errors did you/we encounter during the labs that are prone to distributed systems?
 * Outline the concept of different resilience patterns
 * List 3 resilience patterns of your choice, describe briefly how they work and provide a real-world example
 (e.g. automatic restarts, the process of an app is observed and the app is restarted in case of downtime, e.g. docker-compose, Kubernetes)
