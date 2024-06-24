@@ -147,10 +147,11 @@ The student is able to build and configure an own Spring Boot application from s
 
 ### Review questions
 
-* Identify good and bad API examples and explain why
+* Identify good and bad API examples and explain why - also categorize within the Richardson's Maturity Model
 * Describe the concepts of Verbs and Nouns
 * When is an invocation idempotent and safe? What does it mean? Provide examples
 * Describe in your own words the mapping of REST calls to database (SQL) and CRUD calls
+* Be aware of Richardson's maturity model and explain it
 
 ### Objectives and exercises
 _The student understands the concepts of an API and synchronous communication in distributed systems and can explain it in own words._
