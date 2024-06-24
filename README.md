@@ -17,11 +17,16 @@
 _The student is able to describe the reasons for distributed systems and
 cloud computing in own words and list examples for offerings, topologies and technologies. Includes ability to differentiate between different abstraction layers and knowledge how those layers and according technologies interact with each other. No exercises in this module_
 
-### Student Questions
+### Student/Review Questions
 
 * What is Polyglot Software Development?
 * What did the role of containers change for polyglot software?
 * Security and Cloud - is it safe? :-)
+* Differentiate between distributed systems and cloud. What are the overlaps and what are the differences?
+* List 3 reasons for adopting a distributed architecture?
+* List 3 challenges when adopting?
+* List 3 real-world examples of cloud services we have used?
+* Explain on the example of Gitpod/Codespaces/DockerHub/GitHub/Spring Initializr what a cloud service is (and it what it's not) and in which categorie would you put it? And why?
 
 ![Polyglot Container](/pics/2024-03-11-ContainerVsTraditional.png)
 
