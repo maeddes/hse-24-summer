@@ -74,8 +74,18 @@ cloud computing in own words and list examples for offerings, topologies and tec
   ![image](https://github.com/maeddes/hse-24-summer/assets/22505258/bcad4374-da59-429a-8272-1b42642c888c)
 
 ### Student Questions:
-* Do I have to set up, build, and run the dockerfile  for each container?
-* Can I run multiple applications inside a container?
+
+* Do I have to set up, build, and run the dockerfile for each container?
+With the dockerfile you need to create the image once. From the given you can run as many container instances as you want without re-executing the dockerfile.
+
+* Can I run multiple applications inside a container? (Reason about your answer)
+Yes, it's possible. (But) 12-factor nummer? single process is violated, no independent scaling of internal apps possible.
+
+* Make an example where a multi-process container might make sense? (Real-world example)
+Single process containers make a lot of sense when the container is about one certain application (frontend, backend, db ...)
+Multi process containers can make sense when there is no main running process and only the isolation factor is important.
+z.B. gitpod/devcontainer etc.
+
 
 ### Labs
 Exercises can be found [here](https://lecture.new.trainings.nvtc.io/basics/container/)
